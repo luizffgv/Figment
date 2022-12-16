@@ -1,0 +1,3 @@
+@INCLUDE = Doxyfile
+
+PREDEFINED += __cpp_if_consteval=202106L __cpp_concepts=202002L

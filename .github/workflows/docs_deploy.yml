@@ -1,0 +1,24 @@
+name: Deploy docs
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Run Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with:
+          working-directory: docs
+          doxyfile-path: cpp20
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: docs/doxygen/html

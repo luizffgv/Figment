@@ -1,0 +1,6 @@
+# Generated docs
+docs/doxygen
+
+# Executables
+*.out
+*.exe
