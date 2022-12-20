@@ -27,3 +27,5 @@ As long as you don't make any mistakes. So definitely not! A figment is
 fundamentally unsafe and instances should be used with care, and even then it's
 very easy to fuck everything up. Don't use this library if value your sanity
 over saving a few bytes.
+
+## [Read the docs](https://luizffgv.github.io/Figment/)
